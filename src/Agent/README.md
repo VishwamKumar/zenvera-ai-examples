@@ -16,7 +16,7 @@ Ollama and Foundry: [provider runbook](../../docs/runbooks/providers.md). User-s
 
 ## What it omits
 
-No planning traces, no multi-agent graph, no evaluation. Those are in `zenvera.ai-labs`.
+No planning traces, no multi-agent graph, and no evaluation harness.
 
 ## Related
 

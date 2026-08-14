@@ -1,6 +1,6 @@
 # Example catalog
 
-Maturity levels match `zenvera.dotnet-examples`: Level 1 focused pattern, Level 2 layered example. These are learning-only.
+Maturity levels: Level 1 is a focused pattern; Level 2 is a layered example. These are learning-only.
 
 | # | Example | Level | Project path | Demonstrates | External dependencies | Tests |
 |---|---|---|---|---|---|---|

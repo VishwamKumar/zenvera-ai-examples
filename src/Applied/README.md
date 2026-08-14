@@ -31,4 +31,4 @@ No identity, no cart, no production catalog pipeline. This is a retrofit sketch,
 
 ## Related
 
-Grounded chat UI instead of a catalog API: [ChatWeb](../ChatWeb/README.md). Clean Architecture AI modules: `zenvera.ai-labs`.
+Grounded chat UI instead of a catalog API: [ChatWeb](../ChatWeb/README.md).

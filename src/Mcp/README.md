@@ -33,7 +33,7 @@ These hosts do not call a chat model. Provider config does not apply.
 
 ## What it omits
 
-No HTTP MCP transport, no auth, no publishing. Architecture-sandbox MCP (HTTP host, standards search) is in `zenvera.ai-labs`.
+No HTTP MCP transport, no auth, and no publishing.
 
 ## Related
 

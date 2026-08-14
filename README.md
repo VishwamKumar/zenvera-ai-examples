@@ -5,7 +5,7 @@
 
 Focused .NET 10 examples for Microsoft.Extensions.AI, RAG, MCP, Microsoft Agent Framework, Aspire chat, and adding AI to an existing app.
 
-These are learning references, not production platform components. Architecture sandboxes for RAG, MCP, agents, and evaluation live in [`zenvera.ai-labs`](https://github.com/VishwamKumar/zenvera.ai-labs).
+These are learning references, not production platform components.
 
 **Created and maintained by [Vishwa Kumar](https://vishwa.me).**
 

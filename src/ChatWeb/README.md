@@ -22,7 +22,7 @@ Foundry and Ollama need Docker. Full commands: [provider runbook](../../docs/run
 
 ## What it omits
 
-No evaluation, no multi-tenant isolation, no production vector-store operations. Clean Architecture module boundaries for RAG live in `zenvera.ai-labs`.
+No evaluation, no multi-tenant isolation, and no production vector-store operations.
 
 ## Related
 
