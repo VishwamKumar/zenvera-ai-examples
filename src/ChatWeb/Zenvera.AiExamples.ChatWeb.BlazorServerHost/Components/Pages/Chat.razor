@@ -1,0 +1,59 @@
+@page "/"
+@rendermode InteractiveServer
+@inject GroundedChatService ChatService
+
+<PageTitle>ChatWeb</PageTitle>
+
+<h1>Grounded chat</h1>
+<p>Ask about the Ridgewalker Trail Boot. Retrieved chunks are cited under each answer.</p>
+
+<div class="transcript">
+    @foreach (var turn in _turns)
+    {
+        <div class="turn user"><strong>You:</strong> @turn.Question</div>
+        <div class="turn assistant"><strong>Assistant:</strong> @turn.Answer</div>
+        @if (turn.Citations.Count > 0)
+        {
+            <div class="citations">Sources: @string.Join(", ", turn.Citations)</div>
+        }
+    }
+</div>
+
+<div class="composer">
+    <input @bind="_question" @bind:event="oninput" placeholder="Ask a question" @onkeydown="OnKeyDown" />
+    <button type="button" @onclick="AskAsync" disabled="@_busy">Ask</button>
+</div>
+
+@code {
+    private readonly List<ChatTurn> _turns = [];
+    private readonly List<ChatMessage> _history = [];
+    private string _question = string.Empty;
+    private bool _busy;
+
+    private async Task OnKeyDown(KeyboardEventArgs args)
+    {
+        if (args.Key == "Enter")
+        {
+            await AskAsync();
+        }
+    }
+
+    private async Task AskAsync()
+    {
+        if (string.IsNullOrWhiteSpace(_question) || _busy)
+        {
+            return;
+        }
+
+        _busy = true;
+        var question = _question.Trim();
+        _question = string.Empty;
+        var result = await ChatService.AskAsync(question, _history);
+        _history.Add(new ChatMessage(ChatRole.User, question));
+        _history.Add(new ChatMessage(ChatRole.Assistant, result.Text));
+        _turns.Add(new ChatTurn(question, result.Text, result.Citations));
+        _busy = false;
+    }
+
+    private sealed record ChatTurn(string Question, string Answer, IReadOnlyList<string> Citations);
+}

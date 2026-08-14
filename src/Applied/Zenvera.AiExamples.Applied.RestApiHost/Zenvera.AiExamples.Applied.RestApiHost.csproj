@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <RootNamespace>Zenvera.AiExamples.Applied.RestApiHost</RootNamespace>
+    <AssemblyName>Zenvera.AiExamples.Applied.RestApiHost</AssemblyName>
+    <UserSecretsId>zenvera-ai-examples-applied-api</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zenvera.AiExamples.Applied.Infrastructure\Zenvera.AiExamples.Applied.Infrastructure.csproj" />
+    <ProjectReference Include="..\Zenvera.AiExamples.Applied.ServiceDefaults\Zenvera.AiExamples.Applied.ServiceDefaults.csproj" />
+  </ItemGroup>
+</Project>

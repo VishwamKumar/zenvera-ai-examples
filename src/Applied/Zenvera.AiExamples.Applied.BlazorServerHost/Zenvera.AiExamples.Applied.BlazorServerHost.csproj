@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <RootNamespace>Zenvera.AiExamples.Applied.BlazorServerHost</RootNamespace>
+    <AssemblyName>Zenvera.AiExamples.Applied.BlazorServerHost</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zenvera.AiExamples.Applied.Domain\Zenvera.AiExamples.Applied.Domain.csproj" />
+    <ProjectReference Include="..\Zenvera.AiExamples.Applied.ServiceDefaults\Zenvera.AiExamples.Applied.ServiceDefaults.csproj" />
+  </ItemGroup>
+</Project>

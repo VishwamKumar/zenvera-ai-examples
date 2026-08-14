@@ -1,0 +1,19 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - run: dotnet restore zenvera-ai-examples.slnx
+      - run: dotnet build zenvera-ai-examples.slnx --no-restore --configuration Release
+      - run: dotnet test zenvera-ai-examples.slnx --no-build --configuration Release

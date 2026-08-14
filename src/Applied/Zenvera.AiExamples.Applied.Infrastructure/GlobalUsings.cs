@@ -1,0 +1,9 @@
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.AI;
+global using Microsoft.Extensions.DependencyInjection;
+global using Zenvera.AiExamples.Applied.Application.Contracts;
+global using Zenvera.AiExamples.Applied.Application.Discovery;
+global using Zenvera.AiExamples.Applied.Domain;
+global using Zenvera.AiExamples.Applied.Infrastructure.Persistence;
+global using Zenvera.AiExamples.Applied.Infrastructure.Search;
+global using Zenvera.AiExamples.Shared.Hosting;

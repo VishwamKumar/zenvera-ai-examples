@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Zenvera.AiExamples.Shared.Tests</RootNamespace>
+    <AssemblyName>Zenvera.AiExamples.Shared.Tests</AssemblyName>
+    <NoWarn>$(NoWarn);CA1716;CA1707</NoWarn>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Shared\Zenvera.AiExamples.Shared.Hosting\Zenvera.AiExamples.Shared.Hosting.csproj" />
+  </ItemGroup>
+</Project>

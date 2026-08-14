@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="../README.md" />
+    <File Path="../src/Applied/README.md" />
+    <File Path="../docs/runbooks/providers.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="../src/Applied/Zenvera.AiExamples.Applied.AppHost/Zenvera.AiExamples.Applied.AppHost.csproj" />
+    <Project Path="../src/Applied/Zenvera.AiExamples.Applied.Application/Zenvera.AiExamples.Applied.Application.csproj" />
+    <Project Path="../src/Applied/Zenvera.AiExamples.Applied.BlazorServerHost/Zenvera.AiExamples.Applied.BlazorServerHost.csproj" />
+    <Project Path="../src/Applied/Zenvera.AiExamples.Applied.Domain/Zenvera.AiExamples.Applied.Domain.csproj" />
+    <Project Path="../src/Applied/Zenvera.AiExamples.Applied.Infrastructure/Zenvera.AiExamples.Applied.Infrastructure.csproj" />
+    <Project Path="../src/Applied/Zenvera.AiExamples.Applied.RestApiHost/Zenvera.AiExamples.Applied.RestApiHost.csproj" />
+    <Project Path="../src/Applied/Zenvera.AiExamples.Applied.ServiceDefaults/Zenvera.AiExamples.Applied.ServiceDefaults.csproj" />
+    <Project Path="../src/Shared/Zenvera.AiExamples.Shared.Hosting/Zenvera.AiExamples.Shared.Hosting.csproj" />
+  </Folder>
+</Solution>

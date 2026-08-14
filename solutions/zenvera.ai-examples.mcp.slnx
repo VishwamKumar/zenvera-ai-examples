@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="../README.md" />
+    <File Path="../src/Mcp/README.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="../src/Mcp/Zenvera.AiExamples.Mcp.StdioHost/Zenvera.AiExamples.Mcp.StdioHost.csproj" />
+    <Project Path="../src/Mcp/Zenvera.AiExamples.Mcp.OrdersStdioHost/Zenvera.AiExamples.Mcp.OrdersStdioHost.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="../tests/Mcp/Zenvera.AiExamples.Mcp.Tests/Zenvera.AiExamples.Mcp.Tests.csproj" />
+  </Folder>
+</Solution>

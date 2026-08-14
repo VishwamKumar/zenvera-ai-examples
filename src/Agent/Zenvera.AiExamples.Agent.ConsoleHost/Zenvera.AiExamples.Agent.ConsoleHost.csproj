@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Zenvera.AiExamples.Agent.ConsoleHost</RootNamespace>
+    <AssemblyName>Zenvera.AiExamples.Agent.ConsoleHost</AssemblyName>
+    <UserSecretsId>zenvera-ai-examples-agent-console</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Agents.AI" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Zenvera.AiExamples.Shared.Hosting\Zenvera.AiExamples.Shared.Hosting.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

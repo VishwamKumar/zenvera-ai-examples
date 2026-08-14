@@ -1,0 +1,35 @@
+@page "/"
+@rendermode InteractiveServer
+@inject CatalogApiClient Api
+
+<PageTitle>Products</PageTitle>
+<h1>Zenvera Outfitters</h1>
+
+<div class="composer">
+    <input @bind="_term" placeholder="Search" />
+    <label><input type="checkbox" @bind="_semantic" /> Semantic</label>
+    <button type="button" @onclick="SearchAsync">Search</button>
+</div>
+
+<ul>
+    @foreach (var product in _products)
+    {
+        <li><strong>@product.Name</strong> (@product.Price.ToString("C")) — @product.Description</li>
+    }
+</ul>
+
+@code {
+    private List<Product> _products = [];
+    private string _term = string.Empty;
+    private bool _semantic;
+
+    protected override async Task OnInitializedAsync()
+        => _products = await Api.GetAllAsync();
+
+    private async Task SearchAsync()
+    {
+        _products = string.IsNullOrWhiteSpace(_term)
+            ? await Api.GetAllAsync()
+            : await Api.SearchAsync(_term, _semantic);
+    }
+}

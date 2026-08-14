@@ -1,0 +1,86 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+    <File Path="LICENSE" />
+    <File Path="NuGet.config" />
+    <File Path="README.md" />
+    <File Path="solutions/zenvera.ai-examples.agent.slnx" />
+    <File Path="solutions/zenvera.ai-examples.applied.slnx" />
+    <File Path="solutions/zenvera.ai-examples.chat.slnx" />
+    <File Path="solutions/zenvera.ai-examples.chatweb.slnx" />
+    <File Path="solutions/zenvera.ai-examples.mcp.slnx" />
+    <File Path="solutions/zenvera.ai-examples.rag.slnx" />
+  </Folder>
+  <Folder Name="/.github/" />
+  <Folder Name="/.github/workflows/">
+    <File Path=".github/workflows/ci.yml" />
+  </Folder>
+  <Folder Name="/data/" />
+  <Folder Name="/data/knowledge/">
+    <File Path="data/knowledge/ridgewalker-trail-boot.md" />
+  </Folder>
+  <Folder Name="/docs/">
+    <File Path="docs/catalog.md" />
+    <File Path="docs/learning-path.md" />
+  </Folder>
+  <Folder Name="/docs/comparison-matrices/">
+    <File Path="docs/comparison-matrices/providers.md" />
+  </Folder>
+  <Folder Name="/docs/runbooks/">
+    <File Path="docs/runbooks/providers.md" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Agent/">
+    <File Path="src/Agent/README.md" />
+    <Project Path="src/Agent/Zenvera.AiExamples.Agent.ConsoleHost/Zenvera.AiExamples.Agent.ConsoleHost.csproj" />
+  </Folder>
+  <Folder Name="/src/Applied/">
+    <File Path="src/Applied/README.md" />
+    <Project Path="src/Applied/Zenvera.AiExamples.Applied.AppHost/Zenvera.AiExamples.Applied.AppHost.csproj" />
+    <Project Path="src/Applied/Zenvera.AiExamples.Applied.Application/Zenvera.AiExamples.Applied.Application.csproj" />
+    <Project Path="src/Applied/Zenvera.AiExamples.Applied.BlazorServerHost/Zenvera.AiExamples.Applied.BlazorServerHost.csproj" />
+    <Project Path="src/Applied/Zenvera.AiExamples.Applied.Domain/Zenvera.AiExamples.Applied.Domain.csproj" />
+    <Project Path="src/Applied/Zenvera.AiExamples.Applied.Infrastructure/Zenvera.AiExamples.Applied.Infrastructure.csproj" />
+    <Project Path="src/Applied/Zenvera.AiExamples.Applied.RestApiHost/Zenvera.AiExamples.Applied.RestApiHost.csproj" />
+    <Project Path="src/Applied/Zenvera.AiExamples.Applied.ServiceDefaults/Zenvera.AiExamples.Applied.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/src/Chat/">
+    <File Path="src/Chat/README.md" />
+    <Project Path="src/Chat/Zenvera.AiExamples.Chat.ConsoleHost/Zenvera.AiExamples.Chat.ConsoleHost.csproj" />
+  </Folder>
+  <Folder Name="/src/ChatWeb/">
+    <File Path="src/ChatWeb/README.md" />
+    <Project Path="src/ChatWeb/Zenvera.AiExamples.ChatWeb.AppHost/Zenvera.AiExamples.ChatWeb.AppHost.csproj" />
+    <Project Path="src/ChatWeb/Zenvera.AiExamples.ChatWeb.Application/Zenvera.AiExamples.ChatWeb.Application.csproj" />
+    <Project Path="src/ChatWeb/Zenvera.AiExamples.ChatWeb.BlazorServerHost/Zenvera.AiExamples.ChatWeb.BlazorServerHost.csproj" />
+    <Project Path="src/ChatWeb/Zenvera.AiExamples.ChatWeb.Infrastructure/Zenvera.AiExamples.ChatWeb.Infrastructure.csproj" />
+    <Project Path="src/ChatWeb/Zenvera.AiExamples.ChatWeb.ServiceDefaults/Zenvera.AiExamples.ChatWeb.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/src/Mcp/">
+    <File Path="src/Mcp/README.md" />
+    <Project Path="src/Mcp/Zenvera.AiExamples.Mcp.OrdersStdioHost/Zenvera.AiExamples.Mcp.OrdersStdioHost.csproj" />
+    <Project Path="src/Mcp/Zenvera.AiExamples.Mcp.StdioHost/Zenvera.AiExamples.Mcp.StdioHost.csproj" />
+  </Folder>
+  <Folder Name="/src/Rag/">
+    <File Path="src/Rag/README.md" />
+    <Project Path="src/Rag/Zenvera.AiExamples.Rag.ManualConsoleHost/Zenvera.AiExamples.Rag.ManualConsoleHost.csproj" />
+    <Project Path="src/Rag/Zenvera.AiExamples.Rag.MediConsoleHost/Zenvera.AiExamples.Rag.MediConsoleHost.csproj" />
+  </Folder>
+  <Folder Name="/src/Shared/">
+    <Project Path="src/Shared/Zenvera.AiExamples.Shared.Hosting/Zenvera.AiExamples.Shared.Hosting.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+  <Folder Name="/tests/Mcp/">
+    <Project Path="tests/Mcp/Zenvera.AiExamples.Mcp.Tests/Zenvera.AiExamples.Mcp.Tests.csproj" />
+  </Folder>
+  <Folder Name="/tests/Rag/">
+    <Project Path="tests/Rag/Zenvera.AiExamples.Rag.Tests/Zenvera.AiExamples.Rag.Tests.csproj" />
+  </Folder>
+  <Folder Name="/tests/Shared/">
+    <Project Path="tests/Shared/Zenvera.AiExamples.Shared.Tests/Zenvera.AiExamples.Shared.Tests.csproj" />
+  </Folder>
+</Solution>

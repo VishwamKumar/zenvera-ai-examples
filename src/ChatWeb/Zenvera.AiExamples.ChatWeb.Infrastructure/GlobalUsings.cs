@@ -1,0 +1,11 @@
+global using Microsoft.Extensions.AI;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Logging;
+global using Qdrant.Client;
+global using Qdrant.Client.Grpc;
+global using Zenvera.AiExamples.ChatWeb.Application.Chat;
+global using Zenvera.AiExamples.ChatWeb.Application.Contracts;
+global using Zenvera.AiExamples.ChatWeb.Application.Models;
+global using Zenvera.AiExamples.ChatWeb.Infrastructure.Ingestion;
+global using Zenvera.AiExamples.ChatWeb.Infrastructure.VectorStore;
+global using Zenvera.AiExamples.Shared.Hosting;

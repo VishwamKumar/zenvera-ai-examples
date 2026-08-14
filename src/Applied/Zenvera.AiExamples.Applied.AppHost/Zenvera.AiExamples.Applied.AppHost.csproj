@@ -1,0 +1,15 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.4.6">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Zenvera.AiExamples.Applied.AppHost</RootNamespace>
+    <AssemblyName>Zenvera.AiExamples.Applied.AppHost</AssemblyName>
+    <UserSecretsId>zenvera-ai-examples-applied-apphost</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zenvera.AiExamples.Applied.RestApiHost\Zenvera.AiExamples.Applied.RestApiHost.csproj" />
+    <ProjectReference Include="..\Zenvera.AiExamples.Applied.BlazorServerHost\Zenvera.AiExamples.Applied.BlazorServerHost.csproj" />
+  </ItemGroup>
+</Project>

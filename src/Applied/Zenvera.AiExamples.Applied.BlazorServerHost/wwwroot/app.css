@@ -1,0 +1,37 @@
+html, body {
+    font-family: Segoe UI, sans-serif;
+    margin: 0;
+    background: #f6f7fb;
+}
+
+.page {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.composer {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.composer input[type=text], .composer input:not([type]) {
+    flex: 1;
+    padding: 0.5rem 0.7rem;
+}
+
+button {
+    background: #5b2d90;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    padding: 0.5rem 0.9rem;
+}

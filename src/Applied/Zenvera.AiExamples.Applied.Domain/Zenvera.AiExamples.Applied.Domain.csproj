@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Zenvera.AiExamples.Applied.Domain</RootNamespace>
+    <AssemblyName>Zenvera.AiExamples.Applied.Domain</AssemblyName>
+  </PropertyGroup>
+</Project>

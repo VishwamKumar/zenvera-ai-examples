@@ -1,0 +1,17 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.4.6">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Zenvera.AiExamples.ChatWeb.AppHost</RootNamespace>
+    <AssemblyName>Zenvera.AiExamples.ChatWeb.AppHost</AssemblyName>
+    <UserSecretsId>zenvera-ai-examples-chatweb-apphost</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" />
+    <PackageReference Include="Aspire.Hosting.Qdrant" />
+    <PackageReference Include="CommunityToolkit.Aspire.Hosting.Ollama" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zenvera.AiExamples.ChatWeb.BlazorServerHost\Zenvera.AiExamples.ChatWeb.BlazorServerHost.csproj" />
+    <ProjectReference Include="..\..\Shared\Zenvera.AiExamples.Shared.Hosting\Zenvera.AiExamples.Shared.Hosting.csproj" IsAspireProjectResource="false" />
+  </ItemGroup>
+</Project>

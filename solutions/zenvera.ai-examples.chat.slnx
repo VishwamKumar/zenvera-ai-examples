@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="../README.md" />
+    <File Path="../src/Chat/README.md" />
+    <File Path="../docs/runbooks/providers.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="../src/Chat/Zenvera.AiExamples.Chat.ConsoleHost/Zenvera.AiExamples.Chat.ConsoleHost.csproj" />
+    <Project Path="../src/Shared/Zenvera.AiExamples.Shared.Hosting/Zenvera.AiExamples.Shared.Hosting.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="../tests/Shared/Zenvera.AiExamples.Shared.Tests/Zenvera.AiExamples.Shared.Tests.csproj" />
+  </Folder>
+</Solution>

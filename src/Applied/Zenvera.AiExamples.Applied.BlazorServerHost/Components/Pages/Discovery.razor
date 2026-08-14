@@ -1,0 +1,36 @@
+@page "/discover"
+@rendermode InteractiveServer
+@inject CatalogApiClient Api
+
+<PageTitle>Discover</PageTitle>
+<h1>Grounded product discovery</h1>
+<p>Ask in natural language. Answers are grounded in catalog search, not the full product list.</p>
+
+<div class="composer">
+    <input @bind="_question" placeholder="Something waterproof for rain" />
+    <button type="button" @onclick="AskAsync">Ask</button>
+</div>
+
+@if (_result is not null)
+{
+    <p>@_result.Answer</p>
+    <ul>
+        @foreach (var product in _result.Products)
+        {
+            <li>@product.Name — @product.Price.ToString("C")</li>
+        }
+    </ul>
+}
+
+@code {
+    private string _question = string.Empty;
+    private DiscoveryResponse? _result;
+
+    private async Task AskAsync()
+    {
+        if (!string.IsNullOrWhiteSpace(_question))
+        {
+            _result = await Api.DiscoverAsync(_question);
+        }
+    }
+}
