@@ -31,6 +31,21 @@ Build once before `--no-build`, or drop that flag. Logging goes to stderr so it 
 
 These hosts do not call a chat model. Provider config does not apply.
 
+## Try it
+
+After starting the servers from your MCP client, ask its agent to use the tools:
+
+```text
+Use the weather tool to get the current weather for New York.
+Use the forecast tool to get the five-day forecast for Seattle.
+Use the order tool to get details for ORD-1001.
+Search for orders belonging to Asha Patel.
+Check inventory for the Ridgewalker Trail Boot.
+```
+
+Weather values are randomly generated sample data. Order and inventory values
+come from the in-memory sample records. The stdio hosts are not interactive shells.
+
 ## What it omits
 
 No HTTP MCP transport, no auth, and no publishing.

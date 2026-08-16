@@ -18,6 +18,17 @@ dotnet user-secrets set "Ai:Provider" "Ollama" --project src/Chat/Zenvera.AiExam
 
 This host uses **native** Ollama at `http://localhost:11434/v1`. Start `ollama serve` first. Aspire ChatWeb can start its own Ollama container; this example does not.
 
+## Try it
+
+```text
+Explain dependency injection in one sentence.
+Give me three uses for embeddings.
+summary
+```
+
+The first two prompts demonstrate streaming and conversation history. `summary`
+requests a structured `ConversationSummary`. Type `exit` to quit.
+
 ## What it omits
 
 No RAG, tools, persistence, or UI. Those are later examples.

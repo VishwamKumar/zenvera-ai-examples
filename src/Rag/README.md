@@ -18,6 +18,20 @@ Ask about the boot (materials, warranty, care). Type `exit` to quit. MEDI writes
 
 Ollama and Foundry: [provider runbook](../../docs/runbooks/providers.md). User-secret IDs are `zenvera-ai-examples-rag-manual` and `zenvera-ai-examples-rag-medi`.
 
+## Try it
+
+Use the same questions with both hosts and compare retrieval behavior:
+
+```text
+What is the boot upper made of?
+How should I clean and dry the boots?
+What does the warranty cover?
+Can I return worn boots?
+```
+
+Answers are grounded only in the Ridgewalker Trail Boot sample document. The
+manual retriever can be more sensitive to wording than the MEDI retriever.
+
 ## What it omits
 
 No Aspire, no Qdrant, no citations UI. MEDI is still a console loop, not a production ingestion service.

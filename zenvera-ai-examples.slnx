@@ -19,6 +19,9 @@
   <Folder Name="/.github/workflows/">
     <File Path=".github/workflows/ci.yml" />
   </Folder>
+  <Folder Name="/.vscode/">
+    <File Path=".vscode/mcp.json" />
+  </Folder>
   <Folder Name="/data/" />
   <Folder Name="/data/knowledge/">
     <File Path="data/knowledge/ridgewalker-trail-boot.md" />

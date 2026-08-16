@@ -20,6 +20,19 @@ Set `Ai:Provider` on **AppHost**. Mock needs no Docker: in-process store, sample
 
 Foundry and Ollama need Docker. Full commands: [provider runbook](../../docs/runbooks/providers.md).
 
+## Try it
+
+Open the `chatweb` endpoint from the Aspire dashboard, then ask:
+
+```text
+What materials are used in the Ridgewalker Trail Boot?
+How often should I reapply waterproofing spray?
+Summarize the return and warranty policies.
+```
+
+The answers should be grounded in the indexed sample documents. With Ollama,
+wait until the model, embedding, Qdrant, and `chatweb` resources are healthy.
+
 ## What it omits
 
 No evaluation, no multi-tenant isolation, and no production vector-store operations.

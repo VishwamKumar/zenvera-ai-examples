@@ -25,6 +25,27 @@ dotnet run --project src/Applied/Zenvera.AiExamples.Applied.AppHost
 
 Set `Ai:Provider` on AppHost (`zenvera-ai-examples-applied-apphost`). Mock needs no Docker. Foundry and Ollama use the same native/Foundry settings as the consoles: [provider runbook](../../docs/runbooks/providers.md).
 
+## Try it
+
+Open the storefront endpoint from the Aspire dashboard. On **Products**, compare
+keyword and semantic search with:
+
+```text
+trail
+footwear for wet rocks
+a small pack for a day hike
+```
+
+On **Discover**, try:
+
+```text
+What should I buy for a wet day hike?
+Recommend footwear for gravel and wet rock.
+I need a lightweight bag for a short trip.
+```
+
+Discovery returns a grounded answer together with matching catalog products.
+
 ## What it omits
 
 No identity, no cart, no production catalog pipeline. This is a retrofit sketch, not a store platform.

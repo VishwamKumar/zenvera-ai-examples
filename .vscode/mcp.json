@@ -1,0 +1,26 @@
+{
+  "servers": {
+    "zenvera-tools": {
+      "type": "stdio",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder}/src/Mcp/Zenvera.AiExamples.Mcp.StdioHost",
+        "--no-build"
+      ],
+      "cwd": "${workspaceFolder}"
+    },
+    "zenvera-orders": {
+      "type": "stdio",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder}/src/Mcp/Zenvera.AiExamples.Mcp.OrdersStdioHost",
+        "--no-build"
+      ],
+      "cwd": "${workspaceFolder}"
+    }
+  }
+}

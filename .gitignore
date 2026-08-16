@@ -17,7 +17,8 @@ coverage/
 *.sln.iml
 
 ## VS Code local state
-.vscode/
+.vscode/*
+!.vscode/mcp.json
 
 ## NuGet
 *.nupkg
