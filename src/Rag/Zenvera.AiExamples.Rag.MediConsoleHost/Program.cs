@@ -5,7 +5,7 @@ var configuration = ExampleConfiguration.Load("zenvera-ai-examples-rag-medi");
 using var clients = AiClientFactory.Create(configuration, loggerFactory);
 
 IngestionDocumentReader reader = new MarkdownReader();
-var chunkerOptions = new IngestionChunkerOptions(TiktokenTokenizer.CreateForModel("gpt-4o"))
+var chunkerOptions = new IngestionChunkerOptions(TiktokenTokenizer.CreateForEncoding("o200k_base"))
 {
     MaxTokensPerChunk = 1200,
     OverlapTokens = 150
