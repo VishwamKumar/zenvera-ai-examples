@@ -1,0 +1,81 @@
+# Keep the policy identical across repositories. See docs/artifact-retention.md.
+name: Artifact retention
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Preview deletions without changing artifacts
+        type: boolean
+        default: true
+  schedule:
+    - cron: '23 6 * * 1'
+
+permissions:
+  actions: write
+
+concurrency:
+  group: artifact-retention
+  cancel-in-progress: false
+
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Keep latest three managed artifacts
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        with:
+          script: |
+            // Only GitHub API metadata is read; no PR code or artifact contents are executed.
+            const repo = context.repo;
+            const keep = 3;
+            const dryRun = context.eventName === 'workflow_dispatch' && context.payload.inputs?.dry_run !== 'false';
+            const defaultBranch = context.payload.repository.default_branch;
+            const artifacts = await github.paginate(github.rest.actions.listArtifactsForRepo, {...repo, per_page: 100});
+            const runs = new Map();
+            const groups = new Map();
+            for (const artifact of artifacts) {
+              if (artifact.expired) continue;
+              const category = artifact.name === 'coverage-report' ? 'coverage' :
+                /^smarterasp-[0-9a-f]{40}$/i.test(artifact.name) ? 'release' : null;
+              if (!category || !artifact.workflow_run?.id) continue;
+              const runId = artifact.workflow_run.id;
+              if (!runs.has(runId)) {
+                runs.set(runId, (await github.rest.actions.getWorkflowRun({...repo, run_id: runId})).data);
+              }
+              const run = runs.get(runId);
+              // Active producers are protected. Only successful default-branch releases count.
+              if (run.status !== 'completed') continue;
+              if (category === 'release' && (run.conclusion !== 'success' ||
+                  run.head_branch !== defaultBranch || run.event === 'pull_request' ||
+                  run.head_repository?.full_name !== repo.owner + '/' + repo.repo)) continue;
+              const group = category;
+              if (!groups.has(group)) groups.set(group, []);
+              groups.get(group).push(artifact);
+            }
+            let deleted = 0;
+            let bytes = 0;
+            for (const [group, items] of groups) {
+              items.sort((a, b) => b.created_at.localeCompare(a.created_at) || b.id - a.id);
+              for (const [index, artifact] of items.entries()) {
+                const remove = index >= keep;
+                core.info(JSON.stringify({group, action: remove ? (dryRun ? 'would-delete' : 'delete') : 'keep',
+                  id: artifact.id, name: artifact.name, bytes: artifact.size_in_bytes}));
+                if (!remove) continue;
+                if (!dryRun) {
+                  try {
+                    await github.rest.actions.deleteArtifact({...repo, artifact_id: artifact.id});
+                  } catch (error) {
+                    if (error.status !== 404) throw error; // Already expired or pruned by the release job.
+                  }
+                }
+                deleted++;
+                bytes += artifact.size_in_bytes;
+              }
+            }
+            await core.summary.addHeading('Artifact retention')
+              .addRaw((dryRun ? 'Preview: ' : 'Applied: ') + deleted + ' older artifacts; ' +
+                (bytes / 1000000).toFixed(2) + ' MB. Keep 3 per managed category.\n')
+              .addRaw('Coverage reports are counted repository-wide, including PRs. ' +
+                'Unrelated artifacts, active runs, packages, caches and workflow logs are unchanged.\n').write();
