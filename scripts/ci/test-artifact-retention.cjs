@@ -2,7 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
-const workflow = fs.readFileSync(path.join(__dirname, '../../.github/workflows/artifact-retention.yml'), 'utf8');
+const workflow = fs.readFileSync(path.join(__dirname, '../../.github/workflows/artifact-retention.yml'), 'utf8').replace(/\r\n/g, '\n');
 const script = workflow.split('          script: |\n')[1].split('\n').map(line => line.slice(12)).join('\n');
 const execute = new (Object.getPrototypeOf(async function() {}).constructor)('github', 'context', 'core', script);
 const artifact = (id, name = 'coverage-report', extra = {}) => ({
